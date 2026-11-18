@@ -1,0 +1,36 @@
+id: b15
+split: heldout
+case_type: defective
+expected_status: CHANGES_REQUIRED
+title: 'Interaction: each spec rule is plausible alone; spam + urgent + vip + long wait misroutes'
+tags:
+- multi_rule_interaction
+- precedence
+intended_policy:
+  name: support_v1
+  wait_threshold_minutes: 30
+pair: null
+model_script: null
+expected_findings:
+- kind: unclassified_mismatch
+  acceptable_kinds:
+  - unclassified_mismatch
+  - wrong_destination
+  severity: blocker
+  artifact: spec
+  oracle_artifact: spec
+  locations:
+  - spec@spec-v3#S3
+  rule_refs:
+  - R3.E1
+  - R3
+  counterexample:
+    ticket:
+      category: spam
+      urgent: true
+      tier: vip
+      wait_minutes: 30
+    expected_route: priority_queue
+    actual_route: escalation
+expected_coverage: []
+manual_reasoning: S2 skips spam; S3 exception was narrowed to non-urgent vip. Only the combination misroutes.

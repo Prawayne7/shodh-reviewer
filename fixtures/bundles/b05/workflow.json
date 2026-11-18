@@ -1,0 +1,123 @@
+{
+  "version": "wf-v2",
+  "start": "step_start",
+  "units": {
+    "wait": "minutes"
+  },
+  "nodes": [
+    {
+      "id": "step_urgent",
+      "type": "decision",
+      "refs": [
+        "POL-B"
+      ],
+      "branches": [
+        {
+          "order": 2,
+          "else": "step_wait"
+        },
+        {
+          "order": 1,
+          "when": {
+            "all": [
+              {
+                "field": "urgent",
+                "op": "eq",
+                "value": true
+              },
+              {
+                "not": {
+                  "field": "category",
+                  "op": "eq",
+                  "value": "spam"
+                }
+              }
+            ]
+          },
+          "to": "end_priority"
+        }
+      ]
+    },
+    {
+      "id": "step_start",
+      "type": "decision",
+      "refs": [
+        "POL-A"
+      ],
+      "branches": [
+        {
+          "order": 2,
+          "else": "step_urgent"
+        },
+        {
+          "order": 1,
+          "when": {
+            "field": "category",
+            "op": "is_missing"
+          },
+          "to": "end_manual"
+        }
+      ]
+    },
+    {
+      "id": "end_escalation",
+      "type": "terminal",
+      "destination": "escalation"
+    },
+    {
+      "id": "end_priority",
+      "type": "terminal",
+      "destination": "priority_queue"
+    },
+    {
+      "id": "end_normal",
+      "type": "terminal",
+      "destination": "normal_queue"
+    },
+    {
+      "id": "step_wait",
+      "type": "decision",
+      "refs": [
+        "POL-C"
+      ],
+      "branches": [
+        {
+          "order": 2,
+          "when": {
+            "field": "wait",
+            "op": "ge",
+            "value": 30
+          },
+          "to": "end_escalation"
+        },
+        {
+          "order": 3,
+          "else": "end_normal"
+        },
+        {
+          "order": 1,
+          "when": {
+            "all": [
+              {
+                "field": "wait",
+                "op": "ge",
+                "value": 30
+              },
+              {
+                "field": "tier",
+                "op": "eq",
+                "value": "vip"
+              }
+            ]
+          },
+          "to": "end_priority"
+        }
+      ]
+    },
+    {
+      "id": "end_manual",
+      "type": "terminal",
+      "destination": "manual_review"
+    }
+  ]
+}

@@ -1,0 +1,541 @@
+{
+  "schema_version": "step8-evaluation-v1",
+  "client": "fake",
+  "rows": [
+    {
+      "bundle": "b01",
+      "split": "dev",
+      "case_type": "valid",
+      "expected_status": "PASS",
+      "actual_status": "PASS",
+      "finding_count": 0,
+      "coverage_count": 0,
+      "model_outcomes": [
+        "ok"
+      ]
+    },
+    {
+      "bundle": "b02",
+      "split": "dev",
+      "case_type": "valid",
+      "expected_status": "PASS",
+      "actual_status": "PASS",
+      "finding_count": 0,
+      "coverage_count": 0,
+      "model_outcomes": [
+        "ok"
+      ]
+    },
+    {
+      "bundle": "b03",
+      "split": "heldout",
+      "case_type": "valid",
+      "expected_status": "PASS",
+      "actual_status": "PASS",
+      "finding_count": 0,
+      "coverage_count": 1,
+      "model_outcomes": [
+        "ok"
+      ]
+    },
+    {
+      "bundle": "b04",
+      "split": "dev",
+      "case_type": "valid",
+      "expected_status": "PASS",
+      "actual_status": "PASS",
+      "finding_count": 0,
+      "coverage_count": 1,
+      "model_outcomes": [
+        "ok"
+      ]
+    },
+    {
+      "bundle": "b05",
+      "split": "dev",
+      "case_type": "valid",
+      "expected_status": "PASS",
+      "actual_status": "PASS",
+      "finding_count": 0,
+      "coverage_count": 0,
+      "model_outcomes": [
+        "ok"
+      ]
+    },
+    {
+      "bundle": "b06",
+      "split": "dev",
+      "case_type": "valid",
+      "expected_status": "PASS",
+      "actual_status": "PASS",
+      "finding_count": 0,
+      "coverage_count": 0,
+      "model_outcomes": [
+        "ok"
+      ]
+    },
+    {
+      "bundle": "b07",
+      "split": "dev",
+      "case_type": "defective",
+      "expected_status": "CHANGES_REQUIRED",
+      "actual_status": "CHANGES_REQUIRED",
+      "finding_count": 1,
+      "coverage_count": 0,
+      "model_outcomes": [
+        "ok"
+      ]
+    },
+    {
+      "bundle": "b08",
+      "split": "dev",
+      "case_type": "defective",
+      "expected_status": "CHANGES_REQUIRED",
+      "actual_status": "CHANGES_REQUIRED",
+      "finding_count": 3,
+      "coverage_count": 1,
+      "model_outcomes": [
+        "ok"
+      ]
+    },
+    {
+      "bundle": "b09",
+      "split": "dev",
+      "case_type": "defective",
+      "expected_status": "CHANGES_REQUIRED",
+      "actual_status": "CHANGES_REQUIRED",
+      "finding_count": 1,
+      "coverage_count": 0,
+      "model_outcomes": [
+        "ok"
+      ]
+    },
+    {
+      "bundle": "b10",
+      "split": "heldout",
+      "case_type": "defective",
+      "expected_status": "CHANGES_REQUIRED",
+      "actual_status": "CHANGES_REQUIRED",
+      "finding_count": 1,
+      "coverage_count": 0,
+      "model_outcomes": [
+        "ok"
+      ]
+    },
+    {
+      "bundle": "b11",
+      "split": "dev",
+      "case_type": "defective",
+      "expected_status": "CHANGES_REQUIRED",
+      "actual_status": "CHANGES_REQUIRED",
+      "finding_count": 1,
+      "coverage_count": 0,
+      "model_outcomes": [
+        "ok"
+      ]
+    },
+    {
+      "bundle": "b12",
+      "split": "dev",
+      "case_type": "defective",
+      "expected_status": "CHANGES_REQUIRED",
+      "actual_status": "CHANGES_REQUIRED",
+      "finding_count": 1,
+      "coverage_count": 1,
+      "model_outcomes": [
+        "ok"
+      ]
+    },
+    {
+      "bundle": "b13",
+      "split": "dev",
+      "case_type": "defective",
+      "expected_status": "CHANGES_REQUIRED",
+      "actual_status": "CHANGES_REQUIRED",
+      "finding_count": 1,
+      "coverage_count": 0,
+      "model_outcomes": [
+        "ok"
+      ]
+    },
+    {
+      "bundle": "b14",
+      "split": "dev",
+      "case_type": "defective",
+      "expected_status": "CHANGES_REQUIRED",
+      "actual_status": "CHANGES_REQUIRED",
+      "finding_count": 1,
+      "coverage_count": 0,
+      "model_outcomes": [
+        "ok"
+      ]
+    },
+    {
+      "bundle": "b15",
+      "split": "heldout",
+      "case_type": "defective",
+      "expected_status": "CHANGES_REQUIRED",
+      "actual_status": "CHANGES_REQUIRED",
+      "finding_count": 1,
+      "coverage_count": 0,
+      "model_outcomes": [
+        "ok"
+      ]
+    },
+    {
+      "bundle": "b16",
+      "split": "heldout",
+      "case_type": "incomplete",
+      "expected_status": "INCOMPLETE",
+      "actual_status": "INCOMPLETE",
+      "finding_count": 1,
+      "coverage_count": 3,
+      "model_outcomes": [
+        "ok"
+      ]
+    },
+    {
+      "bundle": "b17",
+      "split": "dev",
+      "case_type": "incomplete",
+      "expected_status": "INCOMPLETE",
+      "actual_status": "INCOMPLETE",
+      "finding_count": 0,
+      "coverage_count": 2,
+      "model_outcomes": [
+        "ok"
+      ]
+    },
+    {
+      "bundle": "b18",
+      "split": "dev",
+      "case_type": "incomplete",
+      "expected_status": "INCOMPLETE",
+      "actual_status": "INCOMPLETE",
+      "finding_count": 0,
+      "coverage_count": 1,
+      "model_outcomes": [
+        "ok"
+      ]
+    },
+    {
+      "bundle": "b19",
+      "split": "heldout",
+      "case_type": "incomplete",
+      "expected_status": "INCOMPLETE",
+      "actual_status": "INCOMPLETE",
+      "finding_count": 0,
+      "coverage_count": 0,
+      "model_outcomes": [
+        "timeout",
+        "timeout"
+      ]
+    },
+    {
+      "bundle": "b20",
+      "split": "dev",
+      "case_type": "incomplete",
+      "expected_status": "INCOMPLETE",
+      "actual_status": "INCOMPLETE",
+      "finding_count": 0,
+      "coverage_count": 2,
+      "model_outcomes": [
+        "ok"
+      ]
+    },
+    {
+      "bundle": "b21",
+      "split": "heldout",
+      "case_type": "defective",
+      "expected_status": "CHANGES_REQUIRED",
+      "actual_status": "CHANGES_REQUIRED",
+      "finding_count": 1,
+      "coverage_count": 1,
+      "model_outcomes": [
+        "ok"
+      ]
+    },
+    {
+      "bundle": "b22",
+      "split": "dev",
+      "case_type": "valid",
+      "expected_status": "PASS",
+      "actual_status": "PASS",
+      "finding_count": 0,
+      "coverage_count": 2,
+      "model_outcomes": [
+        "ok"
+      ]
+    },
+    {
+      "bundle": "b23",
+      "split": "dev",
+      "case_type": "defective",
+      "expected_status": "CHANGES_REQUIRED",
+      "actual_status": "CHANGES_REQUIRED",
+      "finding_count": 1,
+      "coverage_count": 0,
+      "model_outcomes": [
+        "invalid_references",
+        "invalid_references"
+      ]
+    }
+  ],
+  "overall": {
+    "total": 23,
+    "correct": 23,
+    "accuracy": 1.0,
+    "by_case_type": {
+      "valid": {
+        "count": 7,
+        "correct": 7,
+        "expected_status": "PASS",
+        "actual_status_counts": {
+          "PASS": 7,
+          "CHANGES_REQUIRED": 0,
+          "INCOMPLETE": 0
+        }
+      },
+      "defective": {
+        "count": 11,
+        "correct": 11,
+        "expected_status": "CHANGES_REQUIRED",
+        "actual_status_counts": {
+          "PASS": 0,
+          "CHANGES_REQUIRED": 11,
+          "INCOMPLETE": 0
+        }
+      },
+      "incomplete": {
+        "count": 5,
+        "correct": 5,
+        "expected_status": "INCOMPLETE",
+        "actual_status_counts": {
+          "PASS": 0,
+          "CHANGES_REQUIRED": 0,
+          "INCOMPLETE": 5
+        }
+      }
+    },
+    "false_passes": [],
+    "false_blocks": [],
+    "incomplete_cases": [
+      "b16",
+      "b17",
+      "b18",
+      "b19",
+      "b20"
+    ]
+  },
+  "baseline_step6_deterministic_only": {
+    "total": 23,
+    "correct": 22,
+    "accuracy": 0.9565,
+    "by_case_type": {
+      "valid": {
+        "count": 7,
+        "correct": 7,
+        "expected_status": "PASS",
+        "actual_status_counts": {
+          "PASS": 7,
+          "CHANGES_REQUIRED": 0,
+          "INCOMPLETE": 0
+        }
+      },
+      "defective": {
+        "count": 11,
+        "correct": 11,
+        "expected_status": "CHANGES_REQUIRED",
+        "actual_status_counts": {
+          "PASS": 0,
+          "CHANGES_REQUIRED": 11,
+          "INCOMPLETE": 0
+        }
+      },
+      "incomplete": {
+        "count": 5,
+        "correct": 4,
+        "expected_status": "INCOMPLETE",
+        "actual_status_counts": {
+          "PASS": 1,
+          "CHANGES_REQUIRED": 0,
+          "INCOMPLETE": 4
+        }
+      }
+    },
+    "false_passes": [],
+    "false_blocks": [],
+    "incomplete_cases": [
+      "b16",
+      "b17",
+      "b18",
+      "b20"
+    ]
+  },
+  "ablation_model_layer_disabled": {
+    "total": 23,
+    "correct": 22,
+    "accuracy": 0.9565,
+    "by_case_type": {
+      "valid": {
+        "count": 7,
+        "correct": 7,
+        "expected_status": "PASS",
+        "actual_status_counts": {
+          "PASS": 7,
+          "CHANGES_REQUIRED": 0,
+          "INCOMPLETE": 0
+        }
+      },
+      "defective": {
+        "count": 11,
+        "correct": 11,
+        "expected_status": "CHANGES_REQUIRED",
+        "actual_status_counts": {
+          "PASS": 0,
+          "CHANGES_REQUIRED": 11,
+          "INCOMPLETE": 0
+        }
+      },
+      "incomplete": {
+        "count": 5,
+        "correct": 4,
+        "expected_status": "INCOMPLETE",
+        "actual_status_counts": {
+          "PASS": 1,
+          "CHANGES_REQUIRED": 0,
+          "INCOMPLETE": 4
+        }
+      }
+    },
+    "false_passes": [],
+    "false_blocks": [],
+    "incomplete_cases": [
+      "b16",
+      "b17",
+      "b18",
+      "b20"
+    ]
+  },
+  "development": {
+    "total": 17,
+    "correct": 17,
+    "accuracy": 1.0,
+    "by_case_type": {
+      "valid": {
+        "count": 6,
+        "correct": 6,
+        "expected_status": "PASS",
+        "actual_status_counts": {
+          "PASS": 6,
+          "CHANGES_REQUIRED": 0,
+          "INCOMPLETE": 0
+        }
+      },
+      "defective": {
+        "count": 8,
+        "correct": 8,
+        "expected_status": "CHANGES_REQUIRED",
+        "actual_status_counts": {
+          "PASS": 0,
+          "CHANGES_REQUIRED": 8,
+          "INCOMPLETE": 0
+        }
+      },
+      "incomplete": {
+        "count": 3,
+        "correct": 3,
+        "expected_status": "INCOMPLETE",
+        "actual_status_counts": {
+          "PASS": 0,
+          "CHANGES_REQUIRED": 0,
+          "INCOMPLETE": 3
+        }
+      }
+    },
+    "false_passes": [],
+    "false_blocks": [],
+    "incomplete_cases": [
+      "b17",
+      "b18",
+      "b20"
+    ]
+  },
+  "heldout": {
+    "total": 6,
+    "correct": 6,
+    "accuracy": 1.0,
+    "by_case_type": {
+      "valid": {
+        "count": 1,
+        "correct": 1,
+        "expected_status": "PASS",
+        "actual_status_counts": {
+          "PASS": 1,
+          "CHANGES_REQUIRED": 0,
+          "INCOMPLETE": 0
+        }
+      },
+      "defective": {
+        "count": 3,
+        "correct": 3,
+        "expected_status": "CHANGES_REQUIRED",
+        "actual_status_counts": {
+          "PASS": 0,
+          "CHANGES_REQUIRED": 3,
+          "INCOMPLETE": 0
+        }
+      },
+      "incomplete": {
+        "count": 2,
+        "correct": 2,
+        "expected_status": "INCOMPLETE",
+        "actual_status_counts": {
+          "PASS": 0,
+          "CHANGES_REQUIRED": 0,
+          "INCOMPLETE": 2
+        }
+      }
+    },
+    "false_passes": [],
+    "false_blocks": [],
+    "incomplete_cases": [
+      "b16",
+      "b19"
+    ]
+  },
+  "resources": {
+    "wall_seconds": 0.2025,
+    "model_calls": 25,
+    "retries": 2,
+    "model_results_are_synthetic": true
+  },
+  "provenance": {
+    "label_files_are_scoring_only": true,
+    "bundle_hashes": {
+      "b01": "e22929d088efbefd774708a4ce7b3d5c91cecd97492d2f0a6a144b9b03e020c7",
+      "b02": "82b6ec19ce976065a1a5e0ca850bfc1972e585267c84734b3215ca8f7135e920",
+      "b03": "db15f39bc3b3e91b663ea52fed4362b47bb4e363ba799569d687c0fd189709bf",
+      "b04": "674e2c72a10468b0559e44e45c4e6eee978934a89c79555eeaec2b38c1964617",
+      "b05": "f87be7d627ebc45943801f23442dfe404480121169fd67ebdd1a460476d4b348",
+      "b06": "acb0d9fac1b9d4113252cb1e2b3a661ac8d1b2a46141dfba5cd3fbda4886f550",
+      "b07": "0b5ba28880fe4b5b316e97294fa28c0c4fe5fa84982223f5a8213ae47e5aaaf9",
+      "b08": "de09020fa97a4014cc89dda9f2441a31ac9ebd8a4ea9f04bc46da5ba78108c71",
+      "b09": "ee7a74e60fdc9fb7703fd86835f78719a4387a33dced2976281c1d6c9282bcff",
+      "b10": "eccb3f0e6e6b56b65d67ba52801bb29a0b19d16cef094c119f0f055dde5f4179",
+      "b11": "289f1993b5456d1d2bc9f5dac3768ec91f6ebfaec0144dbba39ef09c964e2b75",
+      "b12": "fe5f3bcfac814cc0a7bfbe0889ba980c9c2826251e7c638ca4437296a6cc7e21",
+      "b13": "049617de6d1565514d7f9388681bd9491e5c2e76a6e5d312fd9e5c956c32a48d",
+      "b14": "8f677939ba97b509fd940d79ac8be317b0445053540cb571870e8bc2f145fc39",
+      "b15": "34973b150786583b59e364688ab72a9fbcb2d4001c9ab7a5cccb36e3ed6ff6a9",
+      "b16": "e9e4c46f100261713ffb55ff2d89ce1490441806e99abfa175e5d392af3822e4",
+      "b17": "6c375abcbe3b35f7f050b4e52369b51e9b95505835ce1892cfdbeadf4db44f4a",
+      "b18": "eff6395c8decfc4d94e8981f67edf62d727d17cc2f40ffdd50f83b259bf0b07f",
+      "b19": "e22929d088efbefd774708a4ce7b3d5c91cecd97492d2f0a6a144b9b03e020c7",
+      "b20": "81d8d71cbdfdc25a48876a0cb490677f0e03362300326f3a66647082c1665a85",
+      "b21": "fe69c6299899ce6a44154f748334c90516dc73081ef6fb7999a34b7e26009558",
+      "b22": "917c863db3a9822a86d424c71ee1f98245909db65a31465620ce7c4fd573bad9",
+      "b23": "289f1993b5456d1d2bc9f5dac3768ec91f6ebfaec0144dbba39ef09c964e2b75"
+    }
+  }
+}

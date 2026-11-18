@@ -1,0 +1,101 @@
+{
+  "schema_version": "report-v1",
+  "bundle_id": "b07",
+  "status": "CHANGES_REQUIRED",
+  "summary": "Found 1 evidenced semantic blocker(s); 0 coverage item(s) remain unreviewed.",
+  "findings": [
+    {
+      "id": "semantic:b07:spec:30:billing:False:standard",
+      "kind": "unclassified_mismatch",
+      "severity": "blocker",
+      "source": "deterministic",
+      "rule_ref": "R3",
+      "artifact": "spec",
+      "version": "spec-v3",
+      "location": "default",
+      "summary": "spec routes a supported ticket to 'normal_queue'; the effective requirement routes it to 'escalation'.",
+      "evidence": [
+        {
+          "location": {
+            "artifact": "requirements",
+            "version": "req-v1",
+            "location": "R3"
+          },
+          "excerpt": "Expected route: escalation"
+        },
+        {
+          "location": {
+            "artifact": "spec",
+            "version": "spec-v3",
+            "location": "default"
+          },
+          "excerpt": "Actual route: normal_queue"
+        }
+      ],
+      "correction": "Update spec so this ticket follows route 'escalation'.",
+      "counterexample": {
+        "ticket": {
+          "category": "billing",
+          "urgent": false,
+          "tier": "standard",
+          "wait_minutes": 30
+        },
+        "expected_route": "escalation",
+        "actual_route": "normal_queue",
+        "artifact": "spec",
+        "expected_by": {
+          "artifact": "requirements",
+          "version": "req-v1",
+          "location": "R3"
+        },
+        "actual_by": {
+          "artifact": "spec",
+          "version": "spec-v3",
+          "location": "default"
+        }
+      }
+    }
+  ],
+  "coverage": {
+    "entries": []
+  },
+  "check_results": [
+    {
+      "name": "effective_requirements",
+      "required": true,
+      "status": "passed",
+      "mode": "static",
+      "detail": "effective requirement decision list constructed; unknown coverage remains visible",
+      "tickets_checked": null
+    },
+    {
+      "name": "semantic:spec",
+      "required": true,
+      "status": "failed",
+      "mode": "exhaustive",
+      "detail": "a counterexample was found in the supported boundary-partitioned domain",
+      "tickets_checked": 256
+    },
+    {
+      "name": "semantic:workflow",
+      "required": true,
+      "status": "passed",
+      "mode": "exhaustive",
+      "detail": "equivalent on every representative of the supported condition partition",
+      "tickets_checked": 256
+    },
+    {
+      "name": "semantic:code:C1",
+      "required": true,
+      "status": "passed",
+      "mode": "exhaustive",
+      "detail": "equivalent on every representative of the supported condition partition",
+      "tickets_checked": 256
+    }
+  ],
+  "provenance": {
+    "reviewer_version": "step6-semantic-v1",
+    "config_sha256": null,
+    "model_calls": []
+  }
+}

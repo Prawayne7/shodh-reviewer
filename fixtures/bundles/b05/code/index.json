@@ -1,0 +1,15 @@
+{
+  "snippets": [
+    {
+      "id": "router_main",
+      "file": "route.py",
+      "function": "route",
+      "version": "c-v1",
+      "refs": [
+        "rule-missing",
+        "rule-urgent",
+        "rule-wait"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "version": "wf-v2",
+  "start": "n1",
+  "units": {
+    "wait": "minutes"
+  },
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "decision",
+      "refs": [
+        "R1"
+      ],
+      "branches": [
+        {
+          "order": 1,
+          "when": {
+            "field": "category",
+            "op": "is_missing"
+          },
+          "to": "t_manual"
+        },
+        {
+          "order": 2,
+          "else": "n2"
+        }
+      ]
+    },
+    {
+      "id": "n2",
+      "type": "decision",
+      "refs": [
+        "R2"
+      ],
+      "branches": [
+        {
+          "order": 1,
+          "when": {
+            "all": [
+              {
+                "field": "urgent",
+                "op": "eq",
+                "value": true
+              },
+              {
+                "not": {
+                  "field": "category",
+                  "op": "eq",
+                  "value": "spam"
+                }
+              }
+            ]
+          },
+          "to": "t_priority"
+        },
+        {
+          "order": 2,
+          "else": "n3"
+        }
+      ]
+    },
+    {
+      "id": "n3",
+      "type": "decision",
+      "refs": [
+        "R3"
+      ],
+      "branches": [
+        {
+          "order": 1,
+          "when": {
+            "field": "tier",
+            "op": "eq",
+            "value": "vip"
+          },
+          "to": "n3_vip"
+        },
+        {
+          "order": 2,
+          "else": "n3_std"
+        }
+      ]
+    },
+    {
+      "id": "n3_vip",
+      "type": "decision",
+      "branches": [
+        {
+          "order": 1,
+          "when": {
+            "field": "wait",
+            "op": "ge",
+            "value": 30
+          },
+          "to": "t_priority"
+        },
+        {
+          "order": 2,
+          "else": "t_normal"
+        }
+      ]
+    },
+    {
+      "id": "n3_std",
+      "type": "decision",
+      "branches": [
+        {
+          "order": 1,
+          "when": {
+            "field": "wait",
+            "op": "ge",
+            "value": 30
+          },
+          "to": "t_escalation"
+        },
+        {
+          "order": 2,
+          "else": "t_normal"
+        }
+      ]
+    },
+    {
+      "id": "t_manual",
+      "type": "terminal",
+      "destination": "manual_review"
+    },
+    {
+      "id": "t_priority",
+      "type": "terminal",
+      "destination": "priority_queue"
+    },
+    {
+      "id": "t_escalation",
+      "type": "terminal",
+      "destination": "escalation"
+    },
+    {
+      "id": "t_normal",
+      "type": "terminal",
+      "destination": "normal_queue"
+    }
+  ]
+}

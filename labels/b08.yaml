@@ -1,0 +1,73 @@
+id: b08
+split: dev
+case_type: defective
+expected_status: CHANGES_REQUIRED
+title: Unapproved suggestion (25) implemented in spec, workflow and code
+tags:
+- unapproved_change
+- code_disagreement
+intended_policy:
+  name: support_v1
+  wait_threshold_minutes: 30
+pair: null
+model_script: null
+expected_findings:
+- kind: unapproved_change_implemented
+  acceptable_kinds:
+  - unapproved_change_implemented
+  - threshold_mismatch
+  severity: blocker
+  artifact: spec
+  oracle_artifact: spec
+  locations:
+  - spec@spec-v3#S3
+  rule_refs:
+  - R3
+  counterexample:
+    ticket:
+      category: billing
+      urgent: false
+      tier: standard
+      wait_minutes: 25
+    expected_route: normal_queue
+    actual_route: escalation
+- kind: unapproved_change_implemented
+  acceptable_kinds:
+  - unapproved_change_implemented
+  - threshold_mismatch
+  severity: blocker
+  artifact: workflow
+  oracle_artifact: workflow
+  locations:
+  - workflow@wf-v2#n3
+  rule_refs:
+  - R3
+  counterexample:
+    ticket:
+      category: billing
+      urgent: false
+      tier: standard
+      wait_minutes: 25
+    expected_route: normal_queue
+    actual_route: escalation
+- kind: unapproved_change_implemented
+  acceptable_kinds:
+  - unapproved_change_implemented
+  - threshold_mismatch
+  severity: blocker
+  artifact: code
+  oracle_artifact: code:C1
+  locations:
+  - code:route.py@c-v1#
+  rule_refs:
+  - R3
+  counterexample:
+    ticket:
+      category: billing
+      urgent: false
+      tier: standard
+      wait_minutes: 25
+    expected_route: normal_queue
+    actual_route: escalation
+expected_coverage: []
+manual_reasoning: A1 is pending, so effective R3 stays 30; all three artifacts implement 25.

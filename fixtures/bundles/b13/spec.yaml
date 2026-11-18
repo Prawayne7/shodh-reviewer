@@ -1,0 +1,43 @@
+version: spec-v3
+destinations:
+- manual_review
+- priority_queue
+- escalation
+- normal_queue
+units:
+  wait: minutes
+default: normal_queue
+rules:
+- id: S2
+  order: 2
+  refs:
+  - R2
+  when:
+    field: urgent
+    op: eq
+    value: true
+  route: priority_queue
+  exceptions:
+  - order: 1
+    when:
+      field: category
+      op: eq
+      value: spam
+    action: skip
+- id: S3
+  order: 3
+  refs:
+  - R3
+  when:
+    field: wait
+    op: ge
+    value: 30
+  route: escalation
+  exceptions:
+  - order: 1
+    when:
+      field: tier
+      op: eq
+      value: vip
+    action:
+      route: priority_queue

@@ -1,0 +1,20 @@
+version: req-v1
+requirements:
+- id: POL-C.1
+  order: 5
+  text: 'Exception to POL-C: if tier = vip, route to priority queue.'
+- id: POL-C
+  order: 4
+  text: Otherwise, if wait >= 30 minutes, route to escalation.
+- id: POL-A
+  order: 1
+  text: If category is missing, route to manual review.
+- id: POL-B.1
+  order: 3
+  text: 'Exception to POL-B: if category = "spam", do not apply POL-B.'
+- id: POL-B
+  order: 2
+  text: Otherwise, if urgent, route to priority queue.
+- id: POL-D
+  order: 6
+  text: All remaining tickets -> normal queue.

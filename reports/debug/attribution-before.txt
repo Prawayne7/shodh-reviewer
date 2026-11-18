@@ -1,0 +1,61 @@
+FFFF.                                                                    [100%]
+================================== FAILURES ===================================
+_________ test_unit_mismatch_localizes_rule_and_keeps_fallback_trace __________
+
+    def test_unit_mismatch_localizes_rule_and_keeps_fallback_trace():
+        finding, = findings("b14")
+>       assert finding.location == "S3"
+E       AssertionError: assert 'default' == 'S3'
+E         
+E         - S3
+E         + default
+
+tests\test_evidence_attribution.py:17: AssertionError
+_____ test_early_threshold_attributes_source_rule_in_each_artifact[spec] ______
+
+artifact = 'spec'
+
+    @pytest.mark.parametrize("artifact", ["spec", "workflow", "code:route.py"])
+    def test_early_threshold_attributes_source_rule_in_each_artifact(artifact):
+        finding = next(f for f in findings("b08") if f.artifact == artifact)
+>       assert finding.rule_ref == "R3"
+E       AssertionError: assert 'R4' == 'R3'
+E         
+E         - R3
+E         + R4
+
+tests\test_evidence_attribution.py:26: AssertionError
+___ test_early_threshold_attributes_source_rule_in_each_artifact[workflow] ____
+
+artifact = 'workflow'
+
+    @pytest.mark.parametrize("artifact", ["spec", "workflow", "code:route.py"])
+    def test_early_threshold_attributes_source_rule_in_each_artifact(artifact):
+        finding = next(f for f in findings("b08") if f.artifact == artifact)
+>       assert finding.rule_ref == "R3"
+E       AssertionError: assert 'R4' == 'R3'
+E         
+E         - R3
+E         + R4
+
+tests\test_evidence_attribution.py:26: AssertionError
+_ test_early_threshold_attributes_source_rule_in_each_artifact[code:route.py] _
+
+artifact = 'code:route.py'
+
+    @pytest.mark.parametrize("artifact", ["spec", "workflow", "code:route.py"])
+    def test_early_threshold_attributes_source_rule_in_each_artifact(artifact):
+        finding = next(f for f in findings("b08") if f.artifact == artifact)
+>       assert finding.rule_ref == "R3"
+E       AssertionError: assert 'R4' == 'R3'
+E         
+E         - R3
+E         + R4
+
+tests\test_evidence_attribution.py:26: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/test_evidence_attribution.py::test_unit_mismatch_localizes_rule_and_keeps_fallback_trace
+FAILED tests/test_evidence_attribution.py::test_early_threshold_attributes_source_rule_in_each_artifact[spec]
+FAILED tests/test_evidence_attribution.py::test_early_threshold_attributes_source_rule_in_each_artifact[workflow]
+FAILED tests/test_evidence_attribution.py::test_early_threshold_attributes_source_rule_in_each_artifact[code:route.py]
+4 failed, 1 passed in 0.73s

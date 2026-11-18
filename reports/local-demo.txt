@@ -1,0 +1,27 @@
+
+> python -m reviewer.cli fixtures/bundles/b01 --out C:\Users\muthy\AppData\Local\Packages\openai.codex_2p2nqsd0c76g0\AC\#!sandbox.{157e390f-fb88-4d52-891e-db9a29bd12c2}\Temp\tmppw60hkt_\b01.json --model fake
+Status: PASS
+All required artifacts were reviewed and no semantic mismatch was found within the supported domain.
+Findings: 0 | Coverage entries: 0
+Model calls: 1
+Report: C:\Users\muthy\AppData\Local\Packages\openai.codex_2p2nqsd0c76g0\AC\#!sandbox.{157e390f-fb88-4d52-891e-db9a29bd12c2}\Temp\tmppw60hkt_\b01.json
+  Model outcomes: ok
+
+> python -m reviewer.cli fixtures/bundles/b14 --out C:\Users\muthy\AppData\Local\Packages\openai.codex_2p2nqsd0c76g0\AC\#!sandbox.{157e390f-fb88-4d52-891e-db9a29bd12c2}\Temp\tmppw60hkt_\b14.json --model fake
+Status: CHANGES_REQUIRED
+Found 1 evidenced deterministic blocker(s); 0 coverage item(s) remain unreviewed.
+Findings: 1 | Coverage entries: 0
+Model calls: 1
+Report: C:\Users\muthy\AppData\Local\Packages\openai.codex_2p2nqsd0c76g0\AC\#!sandbox.{157e390f-fb88-4d52-891e-db9a29bd12c2}\Temp\tmppw60hkt_\b14.json
+  spec@spec-v3#S3 | source R3
+  30 min: expected escalation, got normal_queue
+  Actual route selected by default
+  Model outcomes: ok
+
+> python -m reviewer.cli fixtures/bundles/b19 --out C:\Users\muthy\AppData\Local\Packages\openai.codex_2p2nqsd0c76g0\AC\#!sandbox.{157e390f-fb88-4d52-891e-db9a29bd12c2}\Temp\tmppw60hkt_\b19.json --model fake --fake-response C:\Users\muthy\AppData\Local\Packages\openai.codex_2p2nqsd0c76g0\AC\#!sandbox.{157e390f-fb88-4d52-891e-db9a29bd12c2}\Temp\tmppw60hkt_\timeout.txt
+Status: INCOMPLETE
+Model review did not complete; deterministic review cannot be promoted to PASS.
+Findings: 0 | Coverage entries: 0
+Model calls: 2
+Report: C:\Users\muthy\AppData\Local\Packages\openai.codex_2p2nqsd0c76g0\AC\#!sandbox.{157e390f-fb88-4d52-891e-db9a29bd12c2}\Temp\tmppw60hkt_\b19.json
+  Model outcomes: timeout, timeout

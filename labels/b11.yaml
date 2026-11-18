@@ -1,0 +1,38 @@
+id: b11
+split: dev
+case_type: defective
+expected_status: CHANGES_REQUIRED
+title: Code uses > 30 instead of >= 30
+tags:
+- boundary
+- code_disagreement
+intended_policy:
+  name: support_v1
+  wait_threshold_minutes: 30
+pair:
+  base: b01
+  kind: behavior_change
+model_script: null
+expected_findings:
+- kind: boundary_mismatch
+  acceptable_kinds:
+  - boundary_mismatch
+  - script_disagreement
+  - threshold_mismatch
+  severity: blocker
+  artifact: code
+  oracle_artifact: code:C1
+  locations:
+  - code:route.py@c-v1#
+  rule_refs:
+  - R3
+  counterexample:
+    ticket:
+      category: billing
+      urgent: false
+      tier: standard
+      wait_minutes: 30
+    expected_route: escalation
+    actual_route: normal_queue
+expected_coverage: []
+manual_reasoning: null

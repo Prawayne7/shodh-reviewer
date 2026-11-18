@@ -1,0 +1,18 @@
+id: b22
+split: dev
+case_type: valid
+expected_status: PASS
+title: Approval chain 30->25->20 (array order reversed), plus an inapplicable and a rejected record
+tags:
+- approved_change
+- approval_ordering
+- revision_scope
+intended_policy:
+  name: support_v1
+  wait_threshold_minutes: 20
+pair: null
+model_script: null
+expected_findings: []
+expected_coverage: []
+manual_reasoning: 'Applicable approved records in sequence order: 30->25 then 25->20. A3 targets another source
+  version, A4 is rejected.'

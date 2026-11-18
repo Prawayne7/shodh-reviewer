@@ -1,0 +1,18 @@
+id: b03
+split: heldout
+case_type: valid
+expected_status: PASS
+title: 'Valid unusual formulation: hours, negation, folded exception, split workflow, ticket.get'
+tags:
+- unusual_formulation
+- unapproved_change
+- units
+intended_policy:
+  name: support_v1
+  wait_threshold_minutes: 30
+pair: null
+model_script: null
+expected_findings: []
+expected_coverage: []
+manual_reasoning: Every artifact is equivalent to threshold 30 (0.5 hours = 30 min; not(<30) = >=30). The pending
+  suggestion is ignored.

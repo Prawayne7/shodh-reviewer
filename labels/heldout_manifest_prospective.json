@@ -1,0 +1,77 @@
+{
+  "scope": "Prospective rerun of the supplied split. Historical timing and tuning isolation are unverified.",
+  "snapshot": {
+    "heldout_artifacts": {
+      "heldout": {
+        "b03": {
+          "label_sha256": "e94be70e9ab8320fecb958bb0ed4503a15c56075145a25926962b99835bf7943",
+          "bundle_sha256": "db15f39bc3b3e91b663ea52fed4362b47bb4e363ba799569d687c0fd189709bf",
+          "model_script_sha256": null
+        },
+        "b10": {
+          "label_sha256": "a4cae094fca14c07e1996af897eb5c85275e5de986d7dfe8b3985b8ede079c9f",
+          "bundle_sha256": "eccb3f0e6e6b56b65d67ba52801bb29a0b19d16cef094c119f0f055dde5f4179",
+          "model_script_sha256": null
+        },
+        "b15": {
+          "label_sha256": "099593ab86026f2f07a0c1bbf0a2cc666e595e18c556efcc81281924e88bbe6b",
+          "bundle_sha256": "34973b150786583b59e364688ab72a9fbcb2d4001c9ab7a5cccb36e3ed6ff6a9",
+          "model_script_sha256": null
+        },
+        "b16": {
+          "label_sha256": "733bde76fc446f88f453e73bb43585ae4508456fafe82607c8e21ef9a469227c",
+          "bundle_sha256": "e9e4c46f100261713ffb55ff2d89ce1490441806e99abfa175e5d392af3822e4",
+          "model_script_sha256": null
+        },
+        "b21": {
+          "label_sha256": "7ef99c53336b9cdbd15ade021fd8edc27af6c864fed76048e53e35f75def2e22",
+          "bundle_sha256": "fe69c6299899ce6a44154f748334c90516dc73081ef6fb7999a34b7e26009558",
+          "model_script_sha256": null
+        }
+      },
+      "seed_config_sha256": "081ea698d75958ca8a6a7c18b2244c0e43774394f2b71575eb5ba67dbb36d076",
+      "generator_sha256": "34c8a25c67f0494740f72f8e9dbda8b371f0f1cb3862f768b43647a5797dadc0",
+      "oracle_policy_sha256": "2558c17a8778f0ad34885fbedf2efd1a15f370ec9ae96baa55756704d39d141c"
+    },
+    "source_sha256": {
+      "checkpoint/step6/reviewer/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "checkpoint/step6/reviewer/cli.py": "ed7dcd78a5d5dd8e1a12c1b47f67b1f86f23c4cffc506ba918f40187645bc356",
+      "checkpoint/step6/reviewer/effective.py": "2a3528e0eff3fb6da376e99e890ced5753c487d8d46a4264313530e3a2ad3ad9",
+      "checkpoint/step6/reviewer/ir.py": "d731bcf1dce469f8dfe088135accd02508bd321c4dcbe3ebf484784882f8c680",
+      "checkpoint/step6/reviewer/loader.py": "1d197b6aa50aede4b1cf61e288627cced37f362c35445f4e1ef363e12bafdc14",
+      "checkpoint/step6/reviewer/parse_code.py": "918621873959e53450fda077dfd1095748b57007ef1f873552d0ca28fdf661da",
+      "checkpoint/step6/reviewer/parse_requirements.py": "441b386a4ea2f388608ea56bde3a3533166a1339d294de6fb5fbe94cca264d9f",
+      "checkpoint/step6/reviewer/parse_spec.py": "69438e99f802a62db2ad4453a702f63259ea8b8d7b96232cba12a31a74ea5a1e",
+      "checkpoint/step6/reviewer/parse_workflow.py": "3a1a514e1fc64e35967662c6a22b5d7e5b3c7e22ff1cf416e15aad89600dee43",
+      "checkpoint/step6/reviewer/report.py": "eeaea8d23e0f9f15449d678bdcbae829cb7461c2343669e81b6c8cc8583b087b",
+      "checkpoint/step6/reviewer/schemas.py": "70028faa300bbee2a7bfa7fbe06b3b8e5086d4a212b62782e4efaadd76285492",
+      "checkpoint/step6/reviewer/semantics.py": "e1a2b1533d52c97048275f90f47b91a68d57be1e8675394715821c0ec63862c8",
+      "checkpoint/step6/reviewer/status.py": "75195a9df4eb5cf24a5b5d7b44aade9e977f65712877a48aa2f075377dcdcaf6",
+      "checkpoint/step6/run_checkpoint.py": "b2c0ff669374c0c1a0261939bebfc7f3152744571e49aa8da80eb7dae10ac95c",
+      "eval/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "eval/run_eval.py": "f4bf89981fdb5ad82d98c352953aa9f01da5cf809df5288326a21baa7d24dfab",
+      "labels/heldout_manifest.json": "95ecf5e69657bd8de480b5cd6d88a353950a60d658250f3096d11543343560cd",
+      "oracle/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "oracle/check_labels.py": "476d24fc220da957d6522c6412303933eb0eb245b93ff8e0d6205a7e84e15512",
+      "oracle/freeze.py": "6f732e994a569c59d3abb4b8f72be579be15c88167596f978c8a6c47f38b0b4a",
+      "oracle/interpreters.py": "b3e3fff8ed2e82ad66ca1104bc2e48187b9416117e17bb8e66047afa51083274",
+      "oracle/policy.py": "2558c17a8778f0ad34885fbedf2efd1a15f370ec9ae96baa55756704d39d141c",
+      "oracle/prospective.py": "f45ada717711a54a95f2628708526c2108f01dfb73fe2c0387c518f37d83ced0",
+      "requirements.txt": "acce2e96157aba8d91501c2bf5dbd67eba66348fbc8b69382fe690e536e846ee",
+      "reviewer/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reviewer/cli.py": "60197bf666aa0a57fe30fbe78cc12291f0219e490ba064ca1e0982e14d90f183",
+      "reviewer/effective.py": "2a3528e0eff3fb6da376e99e890ced5753c487d8d46a4264313530e3a2ad3ad9",
+      "reviewer/ir.py": "d731bcf1dce469f8dfe088135accd02508bd321c4dcbe3ebf484784882f8c680",
+      "reviewer/loader.py": "1d197b6aa50aede4b1cf61e288627cced37f362c35445f4e1ef363e12bafdc14",
+      "reviewer/model_review.py": "428170942a2520a56953490da68a74a2eb96298fbd19b20471067321268cbacd",
+      "reviewer/parse_code.py": "918621873959e53450fda077dfd1095748b57007ef1f873552d0ca28fdf661da",
+      "reviewer/parse_requirements.py": "441b386a4ea2f388608ea56bde3a3533166a1339d294de6fb5fbe94cca264d9f",
+      "reviewer/parse_spec.py": "69438e99f802a62db2ad4453a702f63259ea8b8d7b96232cba12a31a74ea5a1e",
+      "reviewer/parse_workflow.py": "3a1a514e1fc64e35967662c6a22b5d7e5b3c7e22ff1cf416e15aad89600dee43",
+      "reviewer/report.py": "eeaea8d23e0f9f15449d678bdcbae829cb7461c2343669e81b6c8cc8583b087b",
+      "reviewer/schemas.py": "70028faa300bbee2a7bfa7fbe06b3b8e5086d4a212b62782e4efaadd76285492",
+      "reviewer/semantics.py": "b0ac4bf8d13114f42da65880f1eafcdb08b2cb06a90f8001d74b84f06ea12cd7",
+      "reviewer/status.py": "75195a9df4eb5cf24a5b5d7b44aade9e977f65712877a48aa2f075377dcdcaf6"
+    }
+  }
+}

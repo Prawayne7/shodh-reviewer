@@ -1,0 +1,34 @@
+{
+  "frozen_on_commit": "unknown",
+  "heldout": {
+    "b03": {
+      "label_sha256": "e94be70e9ab8320fecb958bb0ed4503a15c56075145a25926962b99835bf7943",
+      "bundle_sha256": "db15f39bc3b3e91b663ea52fed4362b47bb4e363ba799569d687c0fd189709bf",
+      "model_script_sha256": null
+    },
+    "b10": {
+      "label_sha256": "a4cae094fca14c07e1996af897eb5c85275e5de986d7dfe8b3985b8ede079c9f",
+      "bundle_sha256": "eccb3f0e6e6b56b65d67ba52801bb29a0b19d16cef094c119f0f055dde5f4179",
+      "model_script_sha256": null
+    },
+    "b15": {
+      "label_sha256": "099593ab86026f2f07a0c1bbf0a2cc666e595e18c556efcc81281924e88bbe6b",
+      "bundle_sha256": "34973b150786583b59e364688ab72a9fbcb2d4001c9ab7a5cccb36e3ed6ff6a9",
+      "model_script_sha256": null
+    },
+    "b16": {
+      "label_sha256": "733bde76fc446f88f453e73bb43585ae4508456fafe82607c8e21ef9a469227c",
+      "bundle_sha256": "e9e4c46f100261713ffb55ff2d89ce1490441806e99abfa175e5d392af3822e4",
+      "model_script_sha256": null
+    },
+    "b21": {
+      "label_sha256": "7ef99c53336b9cdbd15ade021fd8edc27af6c864fed76048e53e35f75def2e22",
+      "bundle_sha256": "fe69c6299899ce6a44154f748334c90516dc73081ef6fb7999a34b7e26009558",
+      "model_script_sha256": null
+    }
+  },
+  "seed_config_sha256": "081ea698d75958ca8a6a7c18b2244c0e43774394f2b71575eb5ba67dbb36d076",
+  "generator_sha256": "34c8a25c67f0494740f72f8e9dbda8b371f0f1cb3862f768b43647a5797dadc0",
+  "oracle_policy_sha256": "2558c17a8778f0ad34885fbedf2efd1a15f370ec9ae96baa55756704d39d141c",
+  "note": "Held-out labels, generation config (seed + generator) and oracle policy are frozen here. The reviewer implementation checkpoint is recorded separately in reports/ when it is tagged."
+}

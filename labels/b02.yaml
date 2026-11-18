@@ -1,0 +1,16 @@
+id: b02
+split: dev
+case_type: valid
+expected_status: PASS
+title: Approved change 30->25 implemented everywhere
+tags:
+- approved_change
+intended_policy:
+  name: support_v1
+  wait_threshold_minutes: 25
+pair: null
+model_script: null
+expected_findings: []
+expected_coverage: []
+manual_reasoning: A1 is approved, applicable (req-v1), so effective R3 threshold is 25; spec, workflow and code
+  all use 25.

@@ -1,0 +1,20 @@
+version: req-v1
+requirements:
+- id: R1
+  order: 1
+  text: If category is missing, route to manual review.
+- id: R2
+  order: 2
+  text: Otherwise, if urgent, route to priority queue.
+- id: R2.E1
+  order: 3
+  text: 'Exception to R2: if category = "spam", do not apply R2.'
+- id: R3
+  order: 4
+  text: Otherwise, if wait >= 30, route to escalation.
+- id: R3.E1
+  order: 5
+  text: 'Exception to R3: if tier = vip, route to priority queue.'
+- id: R4
+  order: 6
+  text: All remaining tickets -> normal queue.

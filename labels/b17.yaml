@@ -1,0 +1,18 @@
+id: b17
+split: dev
+case_type: incomplete
+expected_status: INCOMPLETE
+title: R3 written as free prose (unsupported)
+tags:
+- unsupported_prose
+intended_policy:
+  name: support_v1
+  wait_threshold_minutes: 30
+pair: null
+model_script: null
+expected_findings: []
+expected_coverage:
+- kind: requirement
+  id: R3
+  status: unsupported
+manual_reasoning: null

@@ -1,0 +1,36 @@
+id: b12
+split: dev
+case_type: defective
+expected_status: CHANGES_REQUIRED
+title: Workflow decision node has no else branch (tickets with no route)
+tags:
+- wrong_branch
+- missing_branch
+intended_policy:
+  name: support_v1
+  wait_threshold_minutes: 30
+pair: null
+model_script: null
+expected_findings:
+- kind: missing_branch
+  acceptable_kinds:
+  - missing_branch
+  - structure_defect
+  severity: blocker
+  artifact: workflow
+  oracle_artifact: workflow
+  locations:
+  - workflow@wf-v2#n3
+  rule_refs:
+  - R4
+  - R3
+  counterexample:
+    ticket:
+      category: billing
+      urgent: false
+      tier: standard
+      wait_minutes: 0
+    expected_route: normal_queue
+    actual_route: null
+expected_coverage: []
+manual_reasoning: null

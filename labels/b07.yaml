@@ -1,0 +1,39 @@
+id: b07
+split: dev
+case_type: defective
+expected_status: CHANGES_REQUIRED
+title: Spec threshold changed to 35
+tags:
+- changed_threshold
+- boundary
+intended_policy:
+  name: support_v1
+  wait_threshold_minutes: 30
+pair:
+  base: b01
+  kind: behavior_change
+model_script: null
+expected_findings:
+- kind: threshold_mismatch
+  acceptable_kinds:
+  - threshold_mismatch
+  - boundary_mismatch
+  - wrong_destination
+  severity: blocker
+  artifact: spec
+  oracle_artifact: spec
+  locations:
+  - spec@spec-v3#S3
+  - spec@spec-v3#default
+  rule_refs:
+  - R3
+  counterexample:
+    ticket:
+      category: billing
+      urgent: false
+      tier: standard
+      wait_minutes: 30
+    expected_route: escalation
+    actual_route: normal_queue
+expected_coverage: []
+manual_reasoning: null

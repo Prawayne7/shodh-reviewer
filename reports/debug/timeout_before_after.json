@@ -1,0 +1,39 @@
+{
+  "debug_example": "A_configured_model_timeout",
+  "classification": "deliberate fault injection; no production incident claimed",
+  "same_bundle": "b19",
+  "preserved_step6_checkpoint_output": {
+    "bundle": "b19",
+    "split": "dev",
+    "case_type": "incomplete",
+    "expected_status": "INCOMPLETE",
+    "actual_status": "PASS"
+  },
+  "step9_deterministic_pre_model_status": "PASS",
+  "injected_model_behavior": {
+    "script": "fixtures/model_scripts/b19.json",
+    "behavior": "timeout",
+    "bounded_attempts": 2
+  },
+  "step9_final_output": {
+    "bundle": "b19",
+    "split": "dev",
+    "case_type": "incomplete",
+    "expected_status": "INCOMPLETE",
+    "actual_status": "INCOMPLETE",
+    "finding_count": 0,
+    "coverage_count": 0,
+    "model_outcomes": [
+      "timeout",
+      "timeout"
+    ]
+  },
+  "diagnosis": "A configured Stage-3 model check that times out cannot be treated as a completed review. The old deterministic-only checkpoint has no model check and returns PASS; the configured final pipeline must abstain.",
+  "regression_test": "tests/test_step7_model_review.py::test_timeout_is_recorded_and_not_retried_forever",
+  "expected_assertions": [
+    "exactly two calls",
+    "both outcomes are timeout",
+    "required model_advisory check is skipped",
+    "final report status is INCOMPLETE"
+  ]
+}

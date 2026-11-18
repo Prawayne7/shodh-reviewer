@@ -1,0 +1,37 @@
+id: b09
+split: dev
+case_type: defective
+expected_status: CHANGES_REQUIRED
+title: Approved change 25 missing from the workflow
+tags:
+- approved_change
+- wrong_branch
+intended_policy:
+  name: support_v1
+  wait_threshold_minutes: 25
+pair:
+  base: b02
+  kind: behavior_change
+model_script: null
+expected_findings:
+- kind: threshold_mismatch
+  acceptable_kinds:
+  - threshold_mismatch
+  - wrong_destination
+  severity: blocker
+  artifact: workflow
+  oracle_artifact: workflow
+  locations:
+  - workflow@wf-v2#n3
+  rule_refs:
+  - R3
+  counterexample:
+    ticket:
+      category: billing
+      urgent: false
+      tier: standard
+      wait_minutes: 25
+    expected_route: escalation
+    actual_route: normal_queue
+expected_coverage: []
+manual_reasoning: null

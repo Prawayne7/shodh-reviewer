@@ -1,0 +1,36 @@
+id: b10
+split: heldout
+case_type: defective
+expected_status: CHANGES_REQUIRED
+title: 'Precedence: spec evaluates the wait rule before the urgent rule (metadata still correct)'
+tags:
+- precedence
+intended_policy:
+  name: support_v1
+  wait_threshold_minutes: 30
+pair: null
+model_script: null
+expected_findings:
+- kind: precedence_mismatch
+  acceptable_kinds:
+  - precedence_mismatch
+  - wrong_destination
+  severity: blocker
+  artifact: spec
+  oracle_artifact: spec
+  locations:
+  - spec@spec-v3#S2
+  - spec@spec-v3#S3
+  rule_refs:
+  - R2
+  - R3
+  counterexample:
+    ticket:
+      category: billing
+      urgent: true
+      tier: standard
+      wait_minutes: 30
+    expected_route: priority_queue
+    actual_route: escalation
+expected_coverage: []
+manual_reasoning: null

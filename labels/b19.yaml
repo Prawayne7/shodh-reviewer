@@ -1,0 +1,19 @@
+id: b19
+split: dev
+case_type: incomplete
+expected_status: INCOMPLETE
+title: Clean bundle; the model client times out on every call
+tags:
+- model_failure
+intended_policy:
+  name: support_v1
+  wait_threshold_minutes: 30
+pair: null
+model_script: fixtures/model_scripts/b19.json
+expected_findings: []
+expected_coverage:
+- kind: check
+  id: model_review
+  status: failed
+manual_reasoning: Deterministic review is complete but model_review is required when a client is enabled and fails
+  after bounded retries.

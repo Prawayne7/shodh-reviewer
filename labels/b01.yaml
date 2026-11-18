@@ -1,0 +1,15 @@
+id: b01
+split: dev
+case_type: valid
+expected_status: PASS
+title: 'Baseline: R1-R4 with exceptions, all artifacts consistent'
+tags:
+- baseline
+intended_policy:
+  name: support_v1
+  wait_threshold_minutes: 30
+pair: null
+model_script: null
+expected_findings: []
+expected_coverage: []
+manual_reasoning: null

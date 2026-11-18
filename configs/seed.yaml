@@ -1,0 +1,8 @@
+# Seed configuration for every randomised step. Offline runs read only this file.
+seed: 20261118
+# Dataset generator (Step 4). Regenerate with:  python -m fixtures.generate
+# Verify the committed dataset:                 python -m fixtures.generate --check
+generator: fixtures/generate.py
+# Used only to shuffle serialized record order in paired invariant variants
+# (the `order` fields are never touched). The reviewer itself is deterministic.
+reviewer_sampling: none

@@ -1,0 +1,18 @@
+id: b05
+split: dev
+case_type: valid
+expected_status: PASS
+title: b01 with every id renamed and serialized records reordered
+tags:
+- rename_ids
+- reorder_records
+intended_policy:
+  name: support_v1
+  wait_threshold_minutes: 30
+pair:
+  base: b01
+  kind: invariant
+model_script: null
+expected_findings: []
+expected_coverage: []
+manual_reasoning: null

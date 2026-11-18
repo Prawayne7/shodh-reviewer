@@ -1,0 +1,220 @@
+{
+  "checkpoint": {
+    "total": 23,
+    "correct": 22,
+    "accuracy": 0.9565,
+    "by_case_type": {
+      "valid": {
+        "count": 7,
+        "correct": 7,
+        "expected_status": "PASS",
+        "actual_status_counts": {
+          "PASS": 7,
+          "CHANGES_REQUIRED": 0,
+          "INCOMPLETE": 0
+        }
+      },
+      "defective": {
+        "count": 11,
+        "correct": 11,
+        "expected_status": "CHANGES_REQUIRED",
+        "actual_status_counts": {
+          "PASS": 0,
+          "CHANGES_REQUIRED": 11,
+          "INCOMPLETE": 0
+        }
+      },
+      "incomplete": {
+        "count": 5,
+        "correct": 4,
+        "expected_status": "INCOMPLETE",
+        "actual_status_counts": {
+          "PASS": 1,
+          "CHANGES_REQUIRED": 0,
+          "INCOMPLETE": 4
+        }
+      }
+    },
+    "false_passes": [],
+    "false_blocks": [],
+    "incomplete_cases": [
+      "b16",
+      "b17",
+      "b18",
+      "b20"
+    ]
+  },
+  "ablation": {
+    "total": 23,
+    "correct": 22,
+    "accuracy": 0.9565,
+    "by_case_type": {
+      "valid": {
+        "count": 7,
+        "correct": 7,
+        "expected_status": "PASS",
+        "actual_status_counts": {
+          "PASS": 7,
+          "CHANGES_REQUIRED": 0,
+          "INCOMPLETE": 0
+        }
+      },
+      "defective": {
+        "count": 11,
+        "correct": 11,
+        "expected_status": "CHANGES_REQUIRED",
+        "actual_status_counts": {
+          "PASS": 0,
+          "CHANGES_REQUIRED": 11,
+          "INCOMPLETE": 0
+        }
+      },
+      "incomplete": {
+        "count": 5,
+        "correct": 4,
+        "expected_status": "INCOMPLETE",
+        "actual_status_counts": {
+          "PASS": 1,
+          "CHANGES_REQUIRED": 0,
+          "INCOMPLETE": 4
+        }
+      }
+    },
+    "false_passes": [],
+    "false_blocks": [],
+    "incomplete_cases": [
+      "b16",
+      "b17",
+      "b18",
+      "b20"
+    ]
+  },
+  "final": {
+    "total": 23,
+    "correct": 23,
+    "accuracy": 1.0,
+    "by_case_type": {
+      "valid": {
+        "count": 7,
+        "correct": 7,
+        "expected_status": "PASS",
+        "actual_status_counts": {
+          "PASS": 7,
+          "CHANGES_REQUIRED": 0,
+          "INCOMPLETE": 0
+        }
+      },
+      "defective": {
+        "count": 11,
+        "correct": 11,
+        "expected_status": "CHANGES_REQUIRED",
+        "actual_status_counts": {
+          "PASS": 0,
+          "CHANGES_REQUIRED": 11,
+          "INCOMPLETE": 0
+        }
+      },
+      "incomplete": {
+        "count": 5,
+        "correct": 5,
+        "expected_status": "INCOMPLETE",
+        "actual_status_counts": {
+          "PASS": 0,
+          "CHANGES_REQUIRED": 0,
+          "INCOMPLETE": 5
+        }
+      }
+    },
+    "false_passes": [],
+    "false_blocks": [],
+    "incomplete_cases": [
+      "b16",
+      "b17",
+      "b18",
+      "b19",
+      "b20"
+    ]
+  },
+  "heldout": {
+    "total": 5,
+    "correct": 5,
+    "accuracy": 1.0,
+    "by_case_type": {
+      "valid": {
+        "count": 1,
+        "correct": 1,
+        "expected_status": "PASS",
+        "actual_status_counts": {
+          "PASS": 1,
+          "CHANGES_REQUIRED": 0,
+          "INCOMPLETE": 0
+        }
+      },
+      "defective": {
+        "count": 3,
+        "correct": 3,
+        "expected_status": "CHANGES_REQUIRED",
+        "actual_status_counts": {
+          "PASS": 0,
+          "CHANGES_REQUIRED": 3,
+          "INCOMPLETE": 0
+        }
+      },
+      "incomplete": {
+        "count": 1,
+        "correct": 1,
+        "expected_status": "INCOMPLETE",
+        "actual_status_counts": {
+          "PASS": 0,
+          "CHANGES_REQUIRED": 0,
+          "INCOMPLETE": 1
+        }
+      }
+    },
+    "false_passes": [],
+    "false_blocks": [],
+    "incomplete_cases": [
+      "b16"
+    ]
+  },
+  "resources": {
+    "wall_seconds": 2.2806,
+    "checkpoint": {
+      "wall_seconds": 1.3117,
+      "model_calls": 0,
+      "retries": 0
+    },
+    "ablation": {
+      "review_wall_seconds": 0.2294,
+      "model_calls": 0,
+      "retries": 0
+    },
+    "final_review_wall_seconds": 0.2348,
+    "model_calls": 25,
+    "retries": 2,
+    "model_results_are_synthetic": true
+  },
+  "supplied_reviewer_original_scoring": {
+    "expected_findings": 14,
+    "actual_deterministic_findings": 14,
+    "matched_expected_findings": 13,
+    "finding_recall": 0.9286,
+    "unsupported_findings": 1,
+    "rule_reference_mismatches": 3,
+    "finding_precision": 0.9286,
+    "matching_policy": "artifact + rule reference + evidence location + expected/actual counterexample routes"
+  },
+  "final_finding_quality": {
+    "expected_findings": 14,
+    "actual_deterministic_findings": 14,
+    "matched_expected_findings": 14,
+    "finding_recall": 1.0,
+    "unsupported_findings": 0,
+    "rule_reference_mismatches": 0,
+    "finding_precision": 1.0,
+    "supported_counterexamples": 13,
+    "expected_counterexamples": 13,
+    "correct_rule_references": 14,
+    "matching_policy": "One-to-one artifact and primary location, with routes independently replayed for emitted tickets. Rule references scored separately."
+  }
+}

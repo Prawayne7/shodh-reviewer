@@ -1,0 +1,35 @@
+id: b13
+split: dev
+case_type: defective
+expected_status: CHANGES_REQUIRED
+title: Spec omits the missing-category requirement
+tags:
+- missing_requirement
+intended_policy:
+  name: support_v1
+  wait_threshold_minutes: 30
+pair: null
+model_script: null
+expected_findings:
+- kind: omitted_requirement
+  acceptable_kinds:
+  - omitted_requirement
+  - wrong_destination
+  severity: blocker
+  artifact: spec
+  oracle_artifact: spec
+  locations:
+  - requirements@req-v1#R1
+  - spec@spec-v3#
+  rule_refs:
+  - R1
+  counterexample:
+    ticket:
+      category: null
+      urgent: false
+      tier: standard
+      wait_minutes: 0
+    expected_route: manual_review
+    actual_route: normal_queue
+expected_coverage: []
+manual_reasoning: No spec rule carries an id for R1; the omission must still be reported against the source requirement.

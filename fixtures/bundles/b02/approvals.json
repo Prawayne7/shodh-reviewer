@@ -1,0 +1,23 @@
+[
+  {
+    "id": "A1",
+    "status": "approved",
+    "target": "R3",
+    "applies_to_source_version": "req-v1",
+    "sequence": 1,
+    "change": {
+      "kind": "replace_threshold",
+      "field": "wait",
+      "from": {
+        "value": 30,
+        "unit": "minutes"
+      },
+      "to": {
+        "value": 25,
+        "unit": "minutes"
+      }
+    },
+    "approver": "support-lead",
+    "approved_on": "2026-10-01"
+  }
+]

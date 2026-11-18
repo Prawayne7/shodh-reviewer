@@ -1,0 +1,20 @@
+{
+  "debug_example": "B_invented_model_reference",
+  "classification": "deliberate fault injection; validation rejection trace, not a claimed historical production failure",
+  "input_script": "fixtures/model_scripts/b23.json",
+  "injected_claim": {
+    "rule_ref": "INVENTED_RULE",
+    "artifact": "requirements",
+    "version": "v0",
+    "location": "NOWHERE",
+    "evidence": "fabricated"
+  },
+  "observed_behavior": "The model validator rejects invented rule references, nonexistent evidence locations and quotations not present in the bundle. The bounded retry is recorded; no unsupported model observation is added.",
+  "regression_test": "tests/test_step7_model_review.py::test_invented_rule_reference_is_rejected_with_bounded_retry",
+  "expected_assertions": [
+    "first outcome invalid_references",
+    "retry count is bounded to two calls",
+    "only the valid retry is accepted",
+    "no invented observation is added"
+  ]
+}

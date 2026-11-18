@@ -1,0 +1,32 @@
+id: b16
+split: heldout
+case_type: incomplete
+expected_status: INCOMPLETE
+title: Two approved records contradict each other for R3 (artifacts implement 25)
+tags:
+- approval_conflict
+- approved_change
+intended_policy:
+  name: support_v1
+  wait_threshold_minutes: 25
+pair: null
+model_script: null
+expected_findings:
+- kind: approval_conflict
+  acceptable_kinds:
+  - approval_conflict
+  severity: warning
+  artifact: approvals
+  oracle_artifact: approvals
+  locations:
+  - approvals@unversioned#A1
+  - approvals@unversioned#A2
+  rule_refs:
+  - R3
+  behavioural: false
+expected_coverage:
+- kind: requirement
+  id: R3
+  status: conflicted
+manual_reasoning: Same target, same sequence, different 'to'. The reviewer must not pick 25 just because artifacts
+  say so.

@@ -1,0 +1,80 @@
+{
+  "schema_version": "report-v1",
+  "bundle_id": "b19",
+  "status": "INCOMPLETE",
+  "summary": "Model review did not complete; deterministic review cannot be promoted to PASS.",
+  "findings": [],
+  "coverage": {
+    "entries": []
+  },
+  "check_results": [
+    {
+      "name": "effective_requirements",
+      "required": true,
+      "status": "passed",
+      "mode": "static",
+      "detail": "effective requirement decision list constructed; unknown coverage remains visible",
+      "tickets_checked": null
+    },
+    {
+      "name": "semantic:spec",
+      "required": true,
+      "status": "passed",
+      "mode": "exhaustive",
+      "detail": "equivalent on every representative of the supported condition partition",
+      "tickets_checked": 240
+    },
+    {
+      "name": "semantic:workflow",
+      "required": true,
+      "status": "passed",
+      "mode": "exhaustive",
+      "detail": "equivalent on every representative of the supported condition partition",
+      "tickets_checked": 240
+    },
+    {
+      "name": "semantic:code:C1",
+      "required": true,
+      "status": "passed",
+      "mode": "exhaustive",
+      "detail": "equivalent on every representative of the supported condition partition",
+      "tickets_checked": 240
+    },
+    {
+      "name": "model_advisory",
+      "required": true,
+      "status": "skipped",
+      "mode": "model",
+      "detail": "model request timed out",
+      "tickets_checked": null
+    }
+  ],
+  "provenance": {
+    "reviewer_version": "step6-semantic-v1",
+    "config_sha256": null,
+    "model_calls": [
+      {
+        "provider": "fake",
+        "model": "scripted-fake-v1",
+        "temperature": 0.0,
+        "prompt_version": "shodh-reviewer-advisory-v1",
+        "attempt": 1,
+        "outcome": "timeout",
+        "request_sha256": "1ff592ecd276760f2a6241f479352ff405b9bfad6c11e266f2941f1a2aca1f8a",
+        "response_sha256": null,
+        "is_fake": true
+      },
+      {
+        "provider": "fake",
+        "model": "scripted-fake-v1",
+        "temperature": 0.0,
+        "prompt_version": "shodh-reviewer-advisory-v1",
+        "attempt": 2,
+        "outcome": "timeout",
+        "request_sha256": "1ff592ecd276760f2a6241f479352ff405b9bfad6c11e266f2941f1a2aca1f8a",
+        "response_sha256": null,
+        "is_fake": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+id: b23
+split: dev
+case_type: defective
+expected_status: CHANGES_REQUIRED
+title: Code boundary defect; the fake model returns an invented rule reference
+tags:
+- boundary
+- model_failure
+intended_policy:
+  name: support_v1
+  wait_threshold_minutes: 30
+pair: null
+model_script: fixtures/model_scripts/b23.json
+expected_findings:
+- kind: boundary_mismatch
+  acceptable_kinds:
+  - boundary_mismatch
+  - script_disagreement
+  - threshold_mismatch
+  severity: blocker
+  artifact: code
+  oracle_artifact: code:C1
+  locations:
+  - code:route.py@c-v1#
+  rule_refs:
+  - R3
+  counterexample:
+    ticket:
+      category: billing
+      urgent: false
+      tier: standard
+      wait_minutes: 30
+    expected_route: escalation
+    actual_route: normal_queue
+expected_coverage: []
+manual_reasoning: A blocker is established deterministically, so a model failure cannot downgrade it to INCOMPLETE.

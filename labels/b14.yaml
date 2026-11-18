@@ -1,0 +1,34 @@
+id: b14
+split: dev
+case_type: defective
+expected_status: CHANGES_REQUIRED
+title: Spec declares the wait threshold in hours (30 hours = 1800 minutes)
+tags:
+- units
+intended_policy:
+  name: support_v1
+  wait_threshold_minutes: 30
+pair: null
+model_script: null
+expected_findings:
+- kind: unit_mismatch
+  acceptable_kinds:
+  - unit_mismatch
+  - threshold_mismatch
+  severity: blocker
+  artifact: spec
+  oracle_artifact: spec
+  locations:
+  - spec@spec-v3#S3
+  rule_refs:
+  - R3
+  counterexample:
+    ticket:
+      category: billing
+      urgent: false
+      tier: standard
+      wait_minutes: 30
+    expected_route: escalation
+    actual_route: normal_queue
+expected_coverage: []
+manual_reasoning: null

@@ -1,0 +1,18 @@
+id: b06
+split: dev
+case_type: valid
+expected_status: PASS
+title: b02 paraphrased within the supported language; approval id renamed
+tags:
+- paraphrase
+- approved_change
+intended_policy:
+  name: support_v1
+  wait_threshold_minutes: 25
+pair:
+  base: b02
+  kind: invariant
+model_script: null
+expected_findings: []
+expected_coverage: []
+manual_reasoning: null
